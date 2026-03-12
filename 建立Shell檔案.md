@@ -16,7 +16,7 @@ tags:
 touch ~/opt/homebrew/bin/ytd-dlp-mp4.sh
 ```
 
-> [!hint] 
+> [!TIP] 
 > 建議將 Shell 檔案存放於使用者個人資料夾之下，如/Users/user/
 
 ---

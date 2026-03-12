@@ -70,7 +70,7 @@ brew install ffmpeg
 touch /opt/homebrew/bin/ytd-dlp-mp4.sh
 ```
 
-> [!hint] 
+> [!TIP] 
 > 建議將 Shell 檔案存放於使用者個人資料夾之下，如 /Users/user/
 
 ---
@@ -133,7 +133,7 @@ chmod +x /opt/homebrew/bin/ytd-dlp-mp4.sh
 /opt/homebrew/bin/ytd-dlp-mp4.sh
 ```
 
-> [!hint] 
+> [!TIP] 
 > 此時可輸入：
 > ```
 > ytd-dlp-mp3.sh 

@@ -100,7 +100,7 @@ chflags nohidden <路徑>
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 ```
 
-> [!info] 
+> [!NOTE] 
 > 2025-09-29：MacOS Tahoe 取消 Launchpad ，此代碼已無用（悲），但還是可以在 Dock 莫名故障的時候重新啟動 Dock
 
 ### 2.2 強制結束程式
@@ -124,17 +124,17 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 
 |    動作    |            工具             |
 | :------: | :-----------------------: |
-|  擷取整個螢幕  | mac_screenshot-1.png |
-|   擷取視窗   | mac_screenshot-2.png |
-| 擷取螢幕的一部分 | mac_screenshot-3.png |
-|  錄製整個螢幕  | mac_screenshot-4.png |
-| 錄製螢幕的一部分 | mac_screenshot-5.png |
+|  擷取整個螢幕  | ![](mac_screenshot-1.png) |
+|   擷取視窗   | ![](mac_screenshot-2.png) |
+| 擷取螢幕的一部分 | ![](mac_screenshot-3.png) |
+|  錄製整個螢幕  | ![](mac_screenshot-4.png) |
+| 錄製螢幕的一部分 | ![](mac_screenshot-5.png) |
 - 打開「設定」→ 「鍵盤」→「鍵盤快速鍵⋯」→「截圖」→ 即可查看相關快捷鍵
 
 ![](開啟Mac快速鍵設置.png)
 ![](更改Mac截圖快速鍵.png)
 
-> [!hint]
+> [!TIP]
 > 螢幕錄影推薦使用 [QuickRecorder](https://github.com/lihaoyun6/QuickRecorder?tab=readme-ov-file)
 ### 2.4 螢幕熱點 (Hot Corners)：
 
@@ -183,7 +183,7 @@ brew bundle --file=~/Desktop/Brewfile
 ```
 - 這個指令會自動安裝所有在 `Brewfile` 裡的軟體與套件，包括 command-line 工具（formula）與應用程式（cask）
 
-> [!help] 匯出軟體清單（選用）
+> [!TIP] 匯出軟體清單（選用）
 > 如果只想產出純清單來參考，也可以：
 > ```bash
 > brew list > ~/Desktop/brew-formula-list.txt
@@ -261,7 +261,7 @@ change it to
 - **轉換半寬／全寬字型：**
   注音模式下輸入皆為「全形」，英文模式下皆為「半形」，在注音模式下可選取文字後點選 Menubar 中輸入法選項裡面切換全形半形。
 
-> [!hint] 2026-02-21 :
+> [!NOTE] 2026-02-21 :
 > 已從內建注音輸入法跳槽至 vChewing 唯音輸入法。
 > 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup#vChewing_manager.sh)
 
@@ -470,7 +470,7 @@ networksetup -listallhardwareports
 
 * **查看 Wi-Fi 詳細狀態：**
 ```bash
-sudo wdutil info
+sudo wdutil NOTE
 ```
 
 
@@ -507,7 +507,7 @@ sudo launchctl bootstrap system /System/Library/LaunchDaemons/com.apple.Internet
 
 * **解法：** 前往「系統設定」 → 「Apple ID」 → 「iCloud」 → 「Handoff」將其關閉；並在「網路」 → 「Wi-Fi」中關閉「允許其他裝置加入熱點」，再重新設定共享。
 
-> [!warning] 終極清理手段 (重置所有網路設定)
+> [!IMPORTANT] 終極清理手段 (重置所有網路設定)
 > 若上述方法皆無效，可強制刪除相關的 `.plist` 設定檔並重開機（**注意：這會清空部分網路設定，請謹慎使用**）：
 > ```bash
 > sudo rm /Library/Preferences/SystemConfiguration/com.apple.nat.plist
