@@ -101,7 +101,7 @@ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 ```
 
 > [!info] 
-> [[20250929_週一]]：MacOS Tahoe 取消 Launchpad ，此代碼已無用（悲），但還是可以在 Dock 莫名故障的時候重新啟動 Dock
+> 2025-09-29：MacOS Tahoe 取消 Launchpad ，此代碼已無用（悲），但還是可以在 Dock 莫名故障的時候重新啟動 Dock
 
 ### 2.2 強制結束程式
 
@@ -120,33 +120,33 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 
 - `command (⌘) + shift (⇧) + 5`：開啟互動式截圖 / 錄影工具
 
-![[mac-screenshot.png]]
+![](mac-screenshot.png)
 
 |    動作    |            工具             |
 | :------: | :-----------------------: |
-|  擷取整個螢幕  | ![[mac_screenshot-1.png]] |
-|   擷取視窗   | ![[mac_screenshot-2.png]] |
-| 擷取螢幕的一部分 | ![[mac_screenshot-3.png]] |
-|  錄製整個螢幕  | ![[mac_screenshot-4.png]] |
-| 錄製螢幕的一部分 | ![[mac_screenshot-5.png]] |
+|  擷取整個螢幕  | mac_screenshot-1.png |
+|   擷取視窗   | mac_screenshot-2.png |
+| 擷取螢幕的一部分 | mac_screenshot-3.png |
+|  錄製整個螢幕  | mac_screenshot-4.png |
+| 錄製螢幕的一部分 | mac_screenshot-5.png |
 - 打開「設定」→ 「鍵盤」→「鍵盤快速鍵⋯」→「截圖」→ 即可查看相關快捷鍵
 
-![[開啟Mac快速鍵設置.png]]
-![[更改Mac截圖快速鍵.png]]
+![](開啟Mac快速鍵設置.png)
+![](更改Mac截圖快速鍵.png)
 
 > [!hint]
 > 螢幕錄影推薦使用 [QuickRecorder](https://github.com/lihaoyun6/QuickRecorder?tab=readme-ov-file)
 ### 2.4 螢幕熱點 (Hot Corners)：
 
-![[mac_screen_hotspot.png]]
+![](mac_screen_hotspot.png)
 
 ### 2.5 Launchpad 遺跡：
 
 **MacOS 15 Sequoia**
 
-![[Launchpad-1-20250420.png]]
-![[Launchpad-2-20250420.png]]
-![[Launchpad-3-20250420110505.png]]
+![](Launchpad-1-20250420.png)
+![](Launchpad-2-20250420.png)
+![](Launchpad-3-20250420110505.png)
 
 ---
 
@@ -246,13 +246,13 @@ change it to
 按 `Ctrl + O` → `Enter` → `Ctrl + X` 退出。
 #### 終端機設定檔備份腳本:
 
-![[script_backup#backup_zsh.sh]]
+[backup_zsh.sh](script_backup#backup_zsh.sh)
 
 ---
 ## 四、 輸入法與文字處理 (Input Methods)
 
 ### 4.1 Mac 輸入法大全
-![[mac_keyboard.png]]
+![](mac_keyboard.png)
 - **切換輸入法：快速切換當前輸入法以及英文**
 	- 在使用內建的輸入法如注音輸入法時按一下 `Caps lock` 鍵，即可輸入在英文與當前輸入法之間切換
 - **切換所有輸入法：**
@@ -261,9 +261,9 @@ change it to
 - **轉換半寬／全寬字型：**
   注音模式下輸入皆為「全形」，英文模式下皆為「半形」，在注音模式下可選取文字後點選 Menubar 中輸入法選項裡面切換全形半形。
 
-> [!hint] [[20260221_週六]] :
+> [!hint] 2026-02-21 :
 > 已從內建注音輸入法跳槽至 vChewing 唯音輸入法。
-> 如何備份自定義辭典與設定檔請看 [[script_backup#vChewing_manager.sh]]
+> 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup#vChewing_manager.sh)
 
 ---
 ## 五、 Browsers
@@ -294,7 +294,7 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 | browser.tabs.closeWindowWithLastTab |        false        |
 ### 5.3 Enhancer for YouTube
 
-> [!example]- [[20251023_週四]] at Arc
+> [!NOTE] 2025-10-23 at Arc
 > 
 > ```json
 > {
@@ -429,7 +429,7 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 > }
 > ```
 
-> [!example]- [[20251023_週四]] at Firefox
+> [!NOTE] 2025-10-23 at Firefox
 > 
 > ```json
 > {"version":"2.0.130.1","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":85,"blackbars":false,"blockautoplay":false,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":false,"controlbar":{"active":false,"autohide":false,"centered":true,"position":"absolute"},"controls":["loop","reverse-playlist","speed-minus","speed-plus","screenshot"],"controlsvisible":true,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":false,"controlvolumemousebutton":false,"convertshorts":false,"customcolors":{"--main-color":"#ff0033","--main-background":"#111111","--second-background":"#181818","--hover-background":"#232323","--main-text":"#eff0f1","--dimmer-text":"#cccccc","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":true,"date":1745134330277,"defaultvolume":false,"disableautoplay":false,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":true,"localecode":"zh_TW","localedir":"ltr","message":false,"miniplayer":false,"miniplayerposition":"top-left","miniplayersize":"480x270","newestcomments":true,"overridespeeds":true,"pauseforegroundtab":false,"pausevideos":false,"popuplayersize":"640x360","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1080","reload":false,"reversemousewheeldirection":false,"selectquality":false,"selectqualityfullscreenoff":false,"selectqualityfullscreenon":false,"speed":1,"speedvariation":0.25,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"dark-red.css","update":1745134330277,"volume":50,"volumemultiplier":2,"volumevariation":5,"wideplayer":false,"wideplayerviewport":false}}
@@ -438,7 +438,7 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 ---
 ## 六、 Mac 熱點分享與除錯 (Internet Sharing)
 
-> [!abstract] 使用情境
+> [!NOTE] 使用情境
 > 讓 Mac 透過 **有線網路（Ethernet）** 上網，並透過 **Wi-Fi** 分享給其他裝置（如手機、iPad、筆電）使用。此章節包含 GUI 設定流程與 CLI 底層除錯紀錄。
 
 ### 6.1 透過系統介面設定 (GUI)
@@ -456,7 +456,7 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 
 4. 返回共享設定畫面，開啟「網際網路共享」開關。
 5. 成功啟動時，狀態列的 Wi-Fi 圖示會改變：
-![[mac-hotspot-share.png]]
+![](mac-hotspot-share.png)
 
 ### 6.2 終端機除錯指令 (CLI 檢查狀態)
 
@@ -533,7 +533,7 @@ sudo create_ap en0 en5 MyRealHotspot mysecurepassword
 
 ```
 
-> [!bug] 備註：向 Apple 回報 Bug
+> [!WARNING] 備註：向 Apple 回報 Bug
 > 該問題曾在 macOS 15.3.2 發生過。若遇到 `Wi-Fi enters HOSTAP mode but no SSID is broadcast...` 的狀況，可至 [Apple Feedback Assistant](https://feedbackassistant.apple.com) 提交回報。
 
 ---
