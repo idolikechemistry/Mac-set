@@ -11,27 +11,8 @@ tags:
 
 > [!NOTE] 
 > 本文件紀錄 MacOS 的系統調教及常用 App 配置。
-> Updated at 2026-03-12
+> Updated at 2026-03-13
 
----
-```mermaid
-mindmap
-  root(MacOS Setup)
-    系統核心
-      安全性 spctl
-      隔離屬性 xattr
-      隱藏檔案
-    操作介面
-      Launchpad
-      截圖＆螢幕錄影
-      螢幕熱點
-    開發環境
-      Homebrew
-      Terminal Zsh
-    輸入法
-      vChewing
-      內建注音輸入法
-```
 ---
 ## 一、 系統核心與安全性設定 (System & Security)
 
@@ -103,7 +84,7 @@ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 ```
 
 > [!NOTE]
-> 2025-09-29：MacOS Tahoe 取消 Launchpad ，此代碼已無用（悲），但還是可以在 Dock 莫名故障的時候重新啟動 Dock
+> 2025-09-29：MacOS Tahoe 26+ 取消 Launchpad ，此代碼已無用（悲），但還是可以在 Dock 莫名故障的時候重新啟動 Dock
 
 ### 2.2 強制結束程式
 
