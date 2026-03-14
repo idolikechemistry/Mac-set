@@ -11,5 +11,6 @@
     "lyric-top",
     "ruby-size",
     "tableStyles"
-  ]
+  ],
+  "theme": "obsidian"
 }

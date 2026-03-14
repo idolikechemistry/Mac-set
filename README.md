@@ -105,13 +105,13 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 
 ![](mac-screenshot.png)
 
-|    動作    |            工具             |
-| :------: | :-----------------------: |
-|  擷取整個螢幕  | ![](mac_screenshot-1.png) |
-|   擷取視窗   | ![](mac_screenshot-2.png) |
-| 擷取螢幕的一部分 | ![](mac_screenshot-3.png) |
-|  錄製整個螢幕  | ![](mac_screenshot-4.png) |
-| 錄製螢幕的一部分 | ![](mac_screenshot-5.png) |
+|    動作    |              工具               |
+| :------: | :---------------------------: |
+|  擷取整個螢幕  | ![](Mac/mac_screenshot-1.png) |
+|   擷取視窗   | ![](Mac/mac_screenshot-2.png) |
+| 擷取螢幕的一部分 | ![](Mac/mac_screenshot-3.png) |
+|  錄製整個螢幕  | ![](Mac/mac_screenshot-4.png) |
+| 錄製螢幕的一部分 | ![](Mac/mac_screenshot-5.png) |
 - 打開「設定」→ 「鍵盤」→「鍵盤快速鍵⋯」→「截圖」→ 即可查看相關快捷鍵
 
 ![](開啟Mac快速鍵設置.png)
