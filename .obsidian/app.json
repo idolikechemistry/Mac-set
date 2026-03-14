@@ -1,3 +1,5 @@
 {
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "./附件"
 }
