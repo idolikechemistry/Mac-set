@@ -8,7 +8,7 @@ description:
 tags:
 ---
 ---
-## dl_audio.sh : 
+## dl_audio
 
 ```bash
 #!/bin/bash
@@ -385,7 +385,7 @@ fi
 ```
 
 ---
-## dl_mp 4.sh : 
+## dl_mp4
 
 ```sh
 #!/bin/bash
@@ -1383,7 +1383,7 @@ echo "   • Embedded: Metadata, Thumbnail (v38 Ffmpeg manual)"
 ```
 
 ---
-## vChewing_manager.sh : 
+## vChewing_manager
 
 ```sh
 #!/bin/zsh
@@ -1666,7 +1666,7 @@ esac
 ```
 
 ---
-## backup_zsh.sh : 
+## backup_zsh
 
 ```sh
 #!/bin/bash
@@ -1702,7 +1702,7 @@ echo "--- 備份完成 ---"
 ```
 
 ---
-## lyrics-md2srt.sh : 
+## lyrics-md2srt
 
 ```sh
 #!/bin/bash

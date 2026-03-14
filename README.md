@@ -230,7 +230,7 @@ change it to
 按 `Ctrl + O` → `Enter` → `Ctrl + X` 退出。
 #### 終端機設定檔備份腳本:
 
-[backup_zsh.sh](script_backup.md#backup_zshsh)
+[backup_zsh.sh](script_backup.md#backup_zsh)
 
 ---
 ## 四、 輸入法與文字處理 (Input Methods)
@@ -247,7 +247,7 @@ change it to
 
 > [!NOTE]
 > 2026-02-21:已從內建注音輸入法跳槽至 vChewing 唯音輸入法。
-> 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup#vChewing_manager.sh)
+> 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup.md#vChewing_manager)
 
 ---
 ## 五、 Browsers
