@@ -121,15 +121,15 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 > 螢幕錄影推薦使用 [QuickRecorder](https://github.com/lihaoyun6/QuickRecorder?tab=readme-ov-file)
 ### 2.4 螢幕熱點 (Hot Corners)：
 
-![](mac_screen_hotspot.png)
+![](Mac/mac_screen_hotspot.png)
 
 ### 2.5 Launchpad 遺跡：
 
 **MacOS 15 Sequoia**
 
-![](Launchpad-1-20250420.png)
-![](Launchpad-2-20250420.png)
-![](Launchpad-3-20250420110505.png)
+![](Mac/Launchpad-1-20250420.png)
+![](Mac/Launchpad-2-20250420.png)
+![](Mac/Launchpad-3-20250420110505.png)
 
 ---
 
@@ -237,7 +237,7 @@ change it to
 ## 四、 輸入法與文字處理 (Input Methods)
 
 ### 4.1 Mac 輸入法大全
-![](mac_keyboard.png)
+![](Mac/mac_keyboard.png)
 - **切換輸入法：快速切換當前輸入法以及英文**
 	- 在使用內建的輸入法如注音輸入法時按一下 `Caps lock` 鍵，即可輸入在英文與當前輸入法之間切換
 - **切換所有輸入法：**
@@ -444,7 +444,7 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 
 4. 返回共享設定畫面，開啟「網際網路共享」開關。
 5. 成功啟動時，狀態列的 Wi-Fi 圖示會改變：
-![](mac-hotspot-share.png)
+![](Mac/mac-hotspot-share.png)
 
 ### 6.2 終端機除錯指令 (CLI 檢查狀態)
 
