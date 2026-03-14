@@ -1,13 +1,3 @@
----
-up:
-  - "[[與電腦的戰鬥紀錄]]"
-aliases:
-today:
-  - "[[20260212_週四]]"
-description:
-tags:
----
----
 ## dl_audio
 
 ```bash

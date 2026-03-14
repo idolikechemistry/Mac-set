@@ -1,11 +1,3 @@
----
-aliases:
-  - Mac使用手冊
-tags:
-  - Mac
-  - MacOS
-  - iOS
----
 # 與電腦的戰鬥記錄
 ---
 
