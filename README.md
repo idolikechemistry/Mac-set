@@ -3,7 +3,8 @@
 
 > [!NOTE] 
 > 本文件紀錄 MacOS 的系統調教及常用 App 配置。
-> Updated at 2026-03-13
+> 
+> Updated at 2026-03-15
 
 ---
 ## 一、 系統核心與安全性設定 (System & Security)
@@ -11,6 +12,7 @@
 ### 1.1 Allow open Unidentified App from Anywhere
 
 功能：允許開啟「任何來源」的應用程式。
+在「終端機.app」
 
 ```bash
 sudo spctl --master-disable
@@ -239,6 +241,7 @@ change it to
 
 > [!NOTE]
 > 2026-02-21:已從內建注音輸入法跳槽至 [vChewing 唯音輸入法](https://vchewing.github.io/README.html)
+> 
 > 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup.md#vChewing_manager)
 
 ---
