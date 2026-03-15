@@ -305,10 +305,3 @@ body.theme-dark.jay-enable-table-alt-row .markdown-rendered table tbody tr:hover
     max-width: 100% !important;
     display: block;
 }
-
-
-/* =========================================
-   5. 數學公式全域強化 (無需 cssclasses)
-   ========================================= */
-mjx-container[jax="CHTML"] { font-family: "STIX Two Math", serif !important; }
-
