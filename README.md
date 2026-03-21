@@ -98,32 +98,32 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 
 - `command (⌘) + shift (⇧) + 5`：開啟互動式截圖 / 錄影工具
 
-![](mac-screenshot.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac-screenshot.png)
 
-|    動作    |              工具               |
-| :------: | :---------------------------: |
-|  擷取整個螢幕  | ![](Mac/mac_screenshot-1.png) |
-|   擷取視窗   | ![](Mac/mac_screenshot-2.png) |
-| 擷取螢幕的一部分 | ![](Mac/mac_screenshot-3.png) |
-|  錄製整個螢幕  | ![](Mac/mac_screenshot-4.png) |
-| 錄製螢幕的一部分 | ![](Mac/mac_screenshot-5.png) |
+|    動作    |                                      工具                                       |
+| :------: | :---------------------------------------------------------------------------: |
+|  擷取整個螢幕  | ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screenshot-1.png) |
+|   擷取視窗   | ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screenshot-2.png) |
+| 擷取螢幕的一部分 | ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screenshot-3.png) |
+|  錄製整個螢幕  | ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screenshot-4.png) |
+| 錄製螢幕的一部分 | ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screenshot-5.png) |
 - 打開「設定」→ 「鍵盤」→「鍵盤快速鍵⋯」→「截圖」→ 即可查看相關快捷鍵
 
-![](開啟Mac快速鍵設置.png)
-![](更改Mac截圖快速鍵.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/開啟Mac快速鍵設置.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/更改Mac截圖快速鍵.png)
 
 > [!TIP]
 > 螢幕錄影推薦使用 [QuickRecorder](https://github.com/lihaoyun6/QuickRecorder?tab=readme-ov-file)
 ### 2.4 螢幕熱點 (Hot Corners)：
 
-![](Mac/mac_screen_hotspot.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screen_hotspot.png)
 ### 2.5 Launchpad 遺跡：
 
 **MacOS 15 Sequoia**
 
-![](Mac/Launchpad-1-20250420.png)
-![](Mac/Launchpad-2-20250420.png)
-![](Mac/Launchpad-3-20250420110505.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/Launchpad-1-20250420.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/Launchpad-2-20250420.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/Launchpad-3-20250420.png)
 
 ---
 
@@ -231,7 +231,7 @@ change it to
 ## 四、 輸入法與文字處理 (Input Methods)
 
 ### 4.1 Mac 輸入法大全
-![](Mac/mac_keyboard.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_keyboard.png)
 - **切換輸入法：快速切換當前輸入法以及英文**
 	- 在使用內建的輸入法如注音輸入法時按一下 `Caps lock` 鍵，即可輸入在英文與當前輸入法之間切換
 - **切換所有輸入法：**
@@ -439,7 +439,7 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 
 4. 返回共享設定畫面，開啟「網際網路共享」開關。
 5. 成功啟動時，狀態列的 Wi-Fi 圖示會改變：
-![](Mac/mac-hotspot-share.png)
+![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac-hotspot-share.png)
 
 ### 6.2 終端機除錯指令 (CLI 檢查狀態)
 
