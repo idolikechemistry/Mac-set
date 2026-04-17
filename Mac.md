@@ -126,6 +126,7 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 ### 2.4 螢幕熱點 (Hot Corners)：
 
 ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screen_hotspot.png)
+
 ### 2.5 Launchpad 遺跡：
 
 **MacOS 15 Sequoia**
