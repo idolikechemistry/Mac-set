@@ -4,10 +4,14 @@
 > [!NOTE] 
 > 本文件紀錄 MacOS 的系統調教及常用 App 配置。
 > 
-> Updated at 2026-03-15
+> Updated at 2026-04-18
 
 ---
-## 一、 系統核心與安全性設定 (System & Security)
+## 大綱：
+- [一、系統核心與安全性設定](#一-系統核心與安全性設定-system--security)
+
+---
+## 一、系統核心與安全性設定 (System & Security)
 
 ### 1.1 Allow open Unidentified App from Anywhere
 
@@ -235,9 +239,9 @@ change it to
 | [`vChewing_manager.sh`](Scripts/vChewing_manager.sh)             | 備份/還原 vChewing 詞庫與設定，並推送/拉取 GitHub                    | `git`, `defaults`, `pkill`, `bash`                    |
 
 > [!NOTE] 
-> - `dl-mp4.sh` 會基於網址自動檢測來源並嘗試使用瀏覽器 cookie 或 cookies.txt。
-> - `terminal-btop-90*26.sh` 需要 `macOS Terminal.app` 以及 `btop` 可用。
-> - `vChewing_manager.sh` 會讀寫 `$HOME` 下的 **vChewing** 相關設定與備份資料夾。
+> - [`dl-mp4.sh`](Scripts/dl-mp4.sh) 會基於網址自動檢測來源並嘗試使用瀏覽器 cookie 或 cookies.txt。
+> - [`terminal-btop-90*26.sh`](Scripts/terminal-btop-90*26.sh) 需要 `macOS Terminal.app` 以及 `btop` 可用。
+> - [`vChewing_manager.sh`](Scripts/vChewing_manager.sh) 會讀寫 `$HOME` 下的 **vChewing** 相關設定與備份資料夾。
 
 ---
 ## 四、 輸入法與文字處理 (Input Methods)
@@ -255,7 +259,7 @@ change it to
 > [!NOTE]
 > 2026-02-21：已從內建注音輸入法跳槽至 [vChewing 唯音輸入法](https://vchewing.github.io/README.html)
 > 
-> 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup.md#vChewing_manager)
+> 如何備份自定義辭典與設定檔參考：[vChewing_manager.sh](Scripts/vChewing_manager.sh)
 
 ---
 ## 五、 Browsers
