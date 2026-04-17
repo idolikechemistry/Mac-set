@@ -8,11 +8,11 @@
 
 ---
 ## 大綱：
-- [一、系統核心與安全性設定](#一-系統核心與安全性設定-system--security)
+- [一、系統核心與安全性設定](#一系統核心與安全性設定-system--security)
 - [二、操作介面與視覺優化](#二-操作介面與視覺優化-ui--ux)
 - [三、開發環境建置](#三-開發環境建置-development-environment)
 - [四、輸入法與文字處理](#四-輸入法與文字處理-input-methods)
-- [五、瀏覽器](#五-瀏覽器)
+- [五、瀏覽器](#五-browsers)
 - [六、Mac 熱點分享與除錯](#六-mac-熱點分享與除錯-internet-sharing)
 
 ---
@@ -77,7 +77,7 @@ chflags nohidden <路徑>
 ```
 
 ---
-## 二、 操作介面與視覺優化 (UI & UX)
+## 二、操作介面與視覺優化 (UI & UX)
 
 ### 2.1 Launchpad 與 Dock 管理
 
@@ -287,7 +287,7 @@ change it to
 > - [`vChewing_manager.sh`](Scripts/vChewing_manager.sh) 會讀寫 `$HOME` 下的 **vChewing** 相關設定與備份資料夾。
 
 ---
-## 四、 輸入法與文字處理 (Input Methods)
+## 四、輸入法與文字處理 (Input Methods)
 
 ### 4.1 Mac 輸入法大全
 ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_keyboard.png)
@@ -305,7 +305,7 @@ change it to
 > 如何備份自定義辭典與設定檔參考：[vChewing_manager.sh](Scripts/vChewing_manager.sh)
 
 ---
-## 五、 Browsers
+## 五、Browsers
 
 ### 5.1 Youtube 擋廣告
 
@@ -336,6 +336,9 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 > [!NOTE]
 > 2025-10-23 at Arc
 > 
+> <details>
+> <summary>點擊展開 Arc 瀏覽器 JSON 設定檔</summary>
+>
 > ```json
 > {
 >   "version": "3.0.14",
@@ -467,16 +470,21 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 >   }
 > }
 > ```
+> </details>
 
 > [!NOTE]
 > 2025-10-23 at Firefox
 > 
+> <details>
+> <summary>點擊展開 Firefox 瀏覽器 JSON 設定檔</summary>
+>
 > ```json
 > {"version":"2.0.130.1","settings":{"blur":0,"brightness":100,"contrast":100,"grayscale":0,"huerotate":0,"invert":0,"saturate":100,"sepia":0,"applyvideofilters":false,"backgroundcolor":"#000000","backgroundopacity":85,"blackbars":false,"blockautoplay":false,"blockhfrformats":false,"blockwebmformats":false,"boostvolume":false,"cinemamode":false,"cinemamodewideplayer":false,"controlbar":{"active":false,"autohide":false,"centered":true,"position":"absolute"},"controls":["loop","reverse-playlist","speed-minus","speed-plus","screenshot"],"controlsvisible":true,"controlspeed":true,"controlspeedmousebutton":false,"controlvolume":false,"controlvolumemousebutton":false,"convertshorts":false,"customcolors":{"--main-color":"#ff0033","--main-background":"#111111","--second-background":"#181818","--hover-background":"#232323","--main-text":"#eff0f1","--dimmer-text":"#cccccc","--shadow":"#000000"},"customcssrules":"","customscript":"","customtheme":false,"darktheme":true,"date":1745134330277,"defaultvolume":false,"disableautoplay":false,"executescript":false,"expanddescription":false,"filter":"none","hidecardsendscreens":false,"hidechat":false,"hidecomments":false,"hiderelated":false,"hideshorts":false,"ignoreplaylists":true,"ignorepopupplayer":true,"localecode":"zh_TW","localedir":"ltr","message":false,"miniplayer":false,"miniplayerposition":"top-left","miniplayersize":"480x270","newestcomments":true,"overridespeeds":true,"pauseforegroundtab":false,"pausevideos":false,"popuplayersize":"640x360","qualityembeds":"medium","qualityembedsfullscreen":"hd1080","qualityplaylists":"hd720","qualityplaylistsfullscreen":"hd1080","qualityvideos":"hd720","qualityvideosfullscreen":"hd1080","reload":false,"reversemousewheeldirection":false,"selectquality":false,"selectqualityfullscreenoff":false,"selectqualityfullscreenon":false,"speed":1,"speedvariation":0.25,"stopvideos":false,"theatermode":false,"theme":"default-dark","themevariant":"dark-red.css","update":1745134330277,"volume":50,"volumemultiplier":2,"volumevariation":5,"wideplayer":false,"wideplayerviewport":false}}
 > ```
+> </details>
 
 ---
-## 六、 Mac 熱點分享與除錯 (Internet Sharing)
+## 六、Mac 熱點分享與除錯 (Internet Sharing)
 
 > [!NOTE]
 > 使用情境
