@@ -96,7 +96,7 @@ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
 ### 2.3 螢幕截圖與錄影
 
-###### 去除截圖陰影：
+#### 去除截圖陰影：
 
 ```bash
 defaults write com.apple.screencapture disable-shadow -bool true; killall SystemUIServer
