@@ -7,3 +7,4 @@ Thumbs.db
 .obsidian/workspace-mobile.json
 .obsidian/plugins/ / *.log# Logs
 
+.trash/
