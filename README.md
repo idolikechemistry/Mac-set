@@ -4,10 +4,19 @@
 > [!NOTE] 
 > 本文件紀錄 MacOS 的系統調教及常用 App 配置。
 > 
-> Updated at 2026-03-15
+> Updated at 2026-04-18
 
 ---
-## 一、 系統核心與安全性設定 (System & Security)
+## 大綱：
+- [一、系統核心與安全性設定](#一-系統核心與安全性設定-system--security)
+- [二、操作介面與視覺優化](#二-操作介面與視覺優化-ui--ux)
+- [三、開發環境建置](#三-開發環境建置-development-environment)
+- [四、輸入法與文字處理](#四-輸入法與文字處理-input-methods)
+- [五、瀏覽器](#五-瀏覽器)
+- [六、Mac 熱點分享與除錯](#六-mac-熱點分享與除錯-internet-sharing)
+
+---
+## 一、系統核心與安全性設定 (System & Security)
 
 ### 1.1 Allow open Unidentified App from Anywhere
 
@@ -117,6 +126,7 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 ### 2.4 螢幕熱點 (Hot Corners)：
 
 ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_screen_hotspot.png)
+
 ### 2.5 Launchpad 遺跡：
 
 **MacOS 15 Sequoia**
@@ -126,7 +136,6 @@ defaults write com.apple.screencapture disable-shadow -bool true; killall System
 ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/Launchpad-3-20250420.png)
 
 ---
-
 ## 三、 開發環境建置 (Development Environment)
 
 ### 3.1 Homebrew
@@ -166,7 +175,7 @@ brew bundle --file=~/Desktop/Brewfile
 > ```bash
 > brew list > ~/Desktop/brew-formula-list.txt
 > ```
-> ---
+> 
 > ```bash
 > brew list --cask > ~/Desktop/brew-cask-list.txt
 > ```
@@ -223,9 +232,41 @@ find
 change it to
 `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
 按 `Ctrl + O` → `Enter` → `Ctrl + X` 退出。
-#### 終端機設定檔備份腳本:
+### 3.3 Scripts:
 
-[backup_zsh.sh](script_backup.md#backup_zsh)
+> [!IMPORTANT]
+> **環境配置 (環境變數)：**
+> 為了能執行這些腳本，請在 `~/.zshrc` 中加入路徑：
+> ```bash
+> nano ~/.zshrc
+> ```
+> 
+> ```bash
+> export PATH="$HOME/Mac-set/Scripts:$PATH"
+> ```
+> 然後 `Ctrl + O` → `Enter` → `Ctrl + X` 退出。
+> 
+> **賦予權限：**
+> 初次 Clone 或新增腳本後，需執行以下指令才能執行：
+> ```bash
+> chmod +x ~/Mac-set/Scripts/*.sh
+> ```
+
+| 腳本檔名                                                             | 主要功能                                                       | 依賴工具                                                  |
+| ---------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
+| [`backup_zsh.sh`](Scripts/backup_zsh.sh)                         | 備份 `~/.zshrc` 和 `~/.p10k.zsh` 到 iCloud TextEdit 文件資料夾      | 內建 Bash 工具                                            |
+| [`dl-audio.sh`](Scripts/dl-audio.sh)                             | 下載 YouTube 音訊並可選擇 mp3 或 m4a，支援 chapters 嵌入                 | `yt-dlp`, `ffmpeg`, `jq`                              |
+| [`dl-mp4.sh`](Scripts/dl-mp4.sh)                                 | 下載影片/音訊、處理字幕、輸出兼容格式（mp4/mkv）                               | `yt-dlp`, `ffmpeg`, `ffprobe`, `jq`, 可選 `danmaku2ass` |
+| [`embed_youtube_chapters.sh`](Scripts/embed_youtube_chapters.sh) | 從 YouTube 下載章節 metadata，並將章節與封面嵌入指定影片/音訊檔                  | `yt-dlp`, `ffmpeg`, `jq`                              |
+| [`krokiet.sh`](Scripts/krokiet.sh)                               | 啟動 [Krokiet](https://github.com/qarmin/czkawka) macOS 應用程式 | `macOS Terminal` / `bash`                             |
+| [`lyrics-md2srt.sh`](Scripts/lyrics-md2srt.sh)                   | 將帶時間戳記的歌詞 Markdown 轉換為 SRT 字幕檔                             | `awk`                                                 |
+| [`terminal-btop-90*26.sh`](Scripts/terminal-btop-90*26.sh)       | 透過 AppleScript 開啟 Terminal 並在右上角運行 `btop`                  | `osascript`, `btop`, Terminal.app                     |
+| [`vChewing_manager.sh`](Scripts/vChewing_manager.sh)             | 備份/還原 vChewing 詞庫與設定，並推送/拉取 GitHub                         | `git`, `defaults`, `pkill`, `bash`                    |
+
+> [!NOTE] 
+> - [`dl-mp4.sh`](Scripts/dl-mp4.sh) 會基於網址自動檢測來源並嘗試使用瀏覽器 cookie 或 cookies.txt。
+> - [`terminal-btop-90*26.sh`](Scripts/terminal-btop-90*26.sh) 需要 `macOS Terminal.app` 以及 `btop` 可用。
+> - [`vChewing_manager.sh`](Scripts/vChewing_manager.sh) 會讀寫 `$HOME` 下的 **vChewing** 相關設定與備份資料夾。
 
 ---
 ## 四、 輸入法與文字處理 (Input Methods)
@@ -241,9 +282,9 @@ change it to
   注音模式下輸入皆為「全形」，英文模式下皆為「半形」，在注音模式下可選取文字後點選 Menubar 中輸入法選項裡面切換全形半形。
 
 > [!NOTE]
-> 2026-02-21：已從內建注音輸入法跳槽至 [vChewing 唯音輸入法](https://vchewing.github.io/README.html)
+> 2026-02-21：已從內建注音輸入法跳槽至 [vChewing 唯音輸入法](https://github.com/vChewing/vChewing-macOS)
 > 
-> 如何備份自定義辭典與設定檔請看 [vChewing_manager.sh](script_backup.md#vChewing_manager)
+> 如何備份自定義辭典與設定檔參考：[vChewing_manager.sh](Scripts/vChewing_manager.sh)
 
 ---
 ## 五、 Browsers
@@ -396,7 +437,6 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 >       "contrast": 100,
 >       "grayscale": 0,
 >       "inversion": 0,
->       "rotation": 0,
 >       "saturation": 100,
 >       "sepia": 0
 >     },
@@ -450,12 +490,10 @@ youtube.com##+js(set, Object.prototype.hasAllowedInstreamAd, true)
 networksetup -listallhardwareports
 ```
 
-
 * **查看 Wi-Fi 詳細狀態：**
 ```bash
 sudo wdutil NOTE
 ```
-
 
 *(檢查輸出中是否包含 `Op Mode: HOSTAP`、正確的 `SSID` 以及 `IPv4 Address: 192.168.2.1`)*
 * **列出目前是否有裝置連上 (NAT 網段)：**
@@ -463,13 +501,10 @@ sudo wdutil NOTE
 arp -a
 ```
 
-
 * **檢查是否有活躍的 NAT 路由：**
 ```bash
 netstat -an | grep 192.168.2
 ```
-
-
 
 ### 6.3 常見異常與系統級清理
 
@@ -478,7 +513,9 @@ netstat -an | grep 192.168.2
 
 ```bash
 sudo launchctl bootout system /System/Library/LaunchDaemons/com.apple.InternetSharing.plist 2>/dev/null
+```
 
+```
 sudo launchctl bootstrap system /System/Library/LaunchDaemons/com.apple.InternetSharing.plist
 ```
 
@@ -494,14 +531,23 @@ sudo launchctl bootstrap system /System/Library/LaunchDaemons/com.apple.Internet
 > 若上述方法皆無效，可強制刪除相關的 `.plist` 設定檔並重開機（**注意：這會清空部分網路設定，請謹慎使用**）：
 > ```bash
 > sudo rm /Library/Preferences/SystemConfiguration/com.apple.nat.plist
-> sudo rm /Library/Preferences/SystemConfiguration/preferences.plist
-> sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
-> sudo rm /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
-> sudo reboot
-> 
 > ```
-> 
-> 
+>
+> ```bash
+> sudo rm /Library/Preferences/SystemConfiguration/preferences.plist
+> ```
+>
+> ```bash
+> sudo rm /Library/Preferences/SystemConfiguration/NetworkInterfaces.plist
+> ```
+>
+> ```bash
+> sudo rm /Library/Preferences/SystemConfiguration/com.apple.airport.preferences.plist
+> ```
+>
+> ```bash
+> sudo reboot
+> ```
 
 ### 6.4 替代方案：使用 `create_ap` (CLI 手動建立熱點)
 
@@ -510,15 +556,13 @@ sudo launchctl bootstrap system /System/Library/LaunchDaemons/com.apple.Internet
 ```bash
 # 安裝 create_ap
 brew install create_ap
+```
 
+```bash
 # 執行建立熱點 (格式：sudo create_ap <分享出去的網卡> <來源網卡> <SSID> <密碼>)
 sudo create_ap en0 en5 MyRealHotspot mysecurepassword
-
 ```
 
 > [!WARNING]
 > 備註：向 Apple 回報 Bug
 > 該問題曾在 macOS 15.3.2 發生過。若遇到 `Wi-Fi enters HOSTAP mode but no SSID is broadcast...` 的狀況，可至 [Apple Feedback Assistant](https://feedbackassistant.apple.com) 提交回報。
-
----
-
