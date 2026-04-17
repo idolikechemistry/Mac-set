@@ -232,6 +232,25 @@ change it to
 `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
 按 `Ctrl + O` → `Enter` → `Ctrl + X` 退出。
 ### 3.3 Scripts:
+
+> [!IMPORTANT]
+> **環境配置 (環境變數)：**
+> 為了能執行這些腳本，請在 `~/.zshrc` 中加入以下路徑：
+> ```bash
+> nano ~/.zshrc
+> ```
+> 
+> ```bash
+> export PATH="$HOME/Mac-set/Scripts:$PATH"
+> ```
+> 然後 `Ctrl + O` → `Enter` → `Ctrl + X` 退出。
+> 
+> **賦予權限：**
+> 初次 Clone 或新增腳本後，需執行以下指令才能執行：
+> ```bash
+> chmod +x ~/Mac-set/Scripts/*.sh
+> ```
+
 | 腳本檔名                                                             | 主要功能                                                  | 依賴工具                                                  |
 | ---------------------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
 | [`backup_zsh.sh`](Scripts/backup_zsh.sh)                         | 備份 `~/.zshrc` 和 `~/.p10k.zsh` 到 iCloud TextEdit 文件資料夾 | 內建 Bash 工具                                            |
