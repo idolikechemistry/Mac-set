@@ -1,6 +1,6 @@
 {
   "showInlineTitle": true,
-  "promptDelete": true,
+  "promptDelete": false,
   "attachmentFolderPath": "./附件",
   "useMarkdownLinks": true,
   "newLinkFormat": "absolute",
