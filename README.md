@@ -254,6 +254,17 @@ change it to
 > chmod +x ~/Mac-set/Scripts/*.sh
 > ```
 
+| 腳本檔名                                                             | 主要功能                                                       | 依賴工具                                                  |
+| ---------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
+| [`backup_zsh.sh`](Scripts/backup_zsh.sh)                         | 備份 `~/.zshrc` 和 `~/.p10k.zsh` 到 iCloud TextEdit 文件資料夾      | 內建 Bash 工具                                            |
+| [`dl-audio.sh`](Scripts/dl-audio.sh)                             | 下載 YouTube 音訊並可選擇 mp3 或 m4a，支援 chapters 嵌入                 | `yt-dlp`, `ffmpeg`, `jq`                              |
+| [`dl-mp4.sh`](Scripts/dl-mp4.sh)                                 | 下載影片/音訊、處理字幕、輸出兼容格式（mp4/mkv）                               | `yt-dlp`, `ffmpeg`, `ffprobe`, `jq`, 可選 `danmaku2ass` |
+| [`embed_youtube_chapters.sh`](Scripts/embed_youtube_chapters.sh) | 從 YouTube 下載章節 metadata，並將章節與封面嵌入指定影片/音訊檔                  | `yt-dlp`, `ffmpeg`, `jq`                              |
+| [`krokiet.sh`](Scripts/krokiet.sh)                               | 啟動 [Krokiet](https://github.com/qarmin/czkawka) macOS 應用程式 | `macOS Terminal` / `bash`                             |
+| [`lyrics-md2srt.sh`](Scripts/lyrics-md2srt.sh)                   | 將帶時間戳記的歌詞 Markdown 轉換為 SRT 字幕檔                             | `awk`                                                 |
+| [`terminal-btop-90*26.sh`](Scripts/terminal-btop-90*26.sh)       | 透過 AppleScript 開啟 Terminal 並在右上角運行 `btop`                  | `osascript`, `btop`, Terminal.app                     |
+| [`vChewing_manager.sh`](Scripts/vChewing_manager.sh)             | 備份/還原 vChewing 詞庫與設定，並推送/拉取 GitHub                         | `git`, `defaults`, `pkill`, `bash`                    |
+
 本專案的腳本最初是基於作者個人的 macOS (Apple Silicon) 環境與使用習慣所撰寫。若您下載或 Clone 此專案至您的電腦使用，請在執行前打開相應的 `.sh` 腳本，並根據您的環境修改以下**個人化路徑（Hardcoded Paths）**，以免執行報錯：
 
 - [`vChewing_manager.sh`](Scripts/vChewing_manager.sh) (備份路徑)
@@ -271,17 +282,6 @@ change it to
   如果您使用的是一般常規安裝版本，建議將腳本內容直接改為通用的 `open -a "Krokiet"`。
   
 *(註：部分腳本帶有 `@raycast.author` 的 Raycast Metadata 標記，純屬作者原始配置，不影響終端機直接執行。)*
-
-| 腳本檔名                                                             | 主要功能                                                       | 依賴工具                                                  |
-| ---------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
-| [`backup_zsh.sh`](Scripts/backup_zsh.sh)                         | 備份 `~/.zshrc` 和 `~/.p10k.zsh` 到 iCloud TextEdit 文件資料夾      | 內建 Bash 工具                                            |
-| [`dl-audio.sh`](Scripts/dl-audio.sh)                             | 下載 YouTube 音訊並可選擇 mp3 或 m4a，支援 chapters 嵌入                 | `yt-dlp`, `ffmpeg`, `jq`                              |
-| [`dl-mp4.sh`](Scripts/dl-mp4.sh)                                 | 下載影片/音訊、處理字幕、輸出兼容格式（mp4/mkv）                               | `yt-dlp`, `ffmpeg`, `ffprobe`, `jq`, 可選 `danmaku2ass` |
-| [`embed_youtube_chapters.sh`](Scripts/embed_youtube_chapters.sh) | 從 YouTube 下載章節 metadata，並將章節與封面嵌入指定影片/音訊檔                  | `yt-dlp`, `ffmpeg`, `jq`                              |
-| [`krokiet.sh`](Scripts/krokiet.sh)                               | 啟動 [Krokiet](https://github.com/qarmin/czkawka) macOS 應用程式 | `macOS Terminal` / `bash`                             |
-| [`lyrics-md2srt.sh`](Scripts/lyrics-md2srt.sh)                   | 將帶時間戳記的歌詞 Markdown 轉換為 SRT 字幕檔                             | `awk`                                                 |
-| [`terminal-btop-90*26.sh`](Scripts/terminal-btop-90*26.sh)       | 透過 AppleScript 開啟 Terminal 並在右上角運行 `btop`                  | `osascript`, `btop`, Terminal.app                     |
-| [`vChewing_manager.sh`](Scripts/vChewing_manager.sh)             | 備份/還原 vChewing 詞庫與設定，並推送/拉取 GitHub                         | `git`, `defaults`, `pkill`, `bash`                    |
 
 > [!NOTE] 
 > - [`dl-mp4.sh`](Scripts/dl-mp4.sh) 會基於網址自動檢測來源並嘗試使用瀏覽器 cookie 或 cookies.txt。

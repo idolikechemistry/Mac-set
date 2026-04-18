@@ -254,24 +254,6 @@ Press `Ctrl + O` → `Enter` → `Ctrl + X` to exit.
 > chmod +x ~/Mac-set/Scripts/*.sh
 > ```
 
-The scripts in this project were originally written based on the author's personal macOS (Apple Silicon) environment and usage habits. If you download or clone this project to your computer, please open the corresponding `.sh` scripts before execution and modify the following **Hardcoded Paths** according to your environment to avoid execution errors:
-
-- `vChewing_manager.sh` (Backup Path)
-  The `BACKUP_ROOT` in the script defaults to `$HOME/my_documents/Github/my_vChewing-dic`. Be sure to change it to the local path where you want to store your backups.
-
-- `dl-mp4.sh` (Cookie Path)
-  The default Cookie read path for Bilibili downloads is `/opt/homebrew/yt-dlp_cookie_bilibili.txt`. If you are not using an Apple Silicon Mac or the storage location is different, please change the path of `COOKIES_FILE`.
-
-- `backup_zsh.sh` (iCloud Dependency)
-  By default, the script backs up terminal configuration files to the "TextEdit" folder in macOS iCloud (`$HOME/Library/Mobile Documents/...`).
-  If you do not have iCloud Drive enabled or want to save locally, please modify the `DEST_DIR` variable.
-
-- `krokiet.sh` (App Executable Name)
-  The default application name to wake up has a specific hardware compilation suffix (`mac_krokiet_skia_vulkan_heif_avif_arm64`).
-  If you are using a standard installation version, it is recommended to change the script content directly to the generic `open -a "Krokiet"`.
-  
-*(Note: Some scripts contain Raycast Metadata tags like `@raycast.author`, which are purely the author's original configuration and do not affect direct execution in the terminal.)*
-
 | Script Name                                                             | Main Function                                                      | Dependencies                                              |
 | ---------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
 | [`backup_zsh.sh`](Scripts/backup_zsh.sh)                         | Backup `~/.zshrc` and `~/.p10k.zsh` to iCloud TextEdit document folder      | Built-in Bash tools                                            |
@@ -282,6 +264,24 @@ The scripts in this project were originally written based on the author's person
 | [`lyrics-md2srt.sh`](Scripts/lyrics-md2srt.sh)                   | Convert timestamped lyrics Markdown to SRT subtitle file                             | `awk`                                                 |
 | [`terminal-btop-90*26.sh`](Scripts/terminal-btop-90*26.sh)       | Open Terminal via AppleScript and run `btop` in the top right corner                  | `osascript`, `btop`, Terminal.app                     |
 | [`vChewing_manager.sh`](Scripts/vChewing_manager.sh)             | Backup/restore vChewing dictionary and settings, and push/pull to GitHub                         | `git`, `defaults`, `pkill`, `bash`                    |
+
+The scripts in this project were originally written based on the author's personal macOS (Apple Silicon) environment and usage habits. If you download or clone this project to your computer, please open the corresponding `.sh` scripts before execution and modify the following **Hardcoded Paths** according to your environment to avoid execution errors:
+
+- `vChewing_manager.sh` (Backup Path)
+  The `BACKUP_ROOT` in the script defaults to `$HOME/my_documents/Github/my_vChewing-dic` . Be sure to change it to the local path where you want to store your backups.
+
+- `dl-mp4.sh` (Cookie Path)
+  The default Cookie read path for Bilibili downloads is `/opt/homebrew/yt-dlp_cookie_bilibili.txt` . If you are not using an Apple Silicon Mac or the storage location is different, please change the path of `COOKIES_FILE` .
+
+- `backup_zsh.sh` (iCloud Dependency)
+  By default, the script backs up terminal configuration files to the "TextEdit" folder in macOS iCloud ( `$HOME/Library/Mobile Documents/...` ).
+  If you do not have iCloud Drive enabled or want to save locally, please modify the `DEST_DIR` variable.
+
+- `krokiet.sh` (App Executable Name)
+  The default application name to wake up has a specific hardware compilation suffix ( `mac_krokiet_skia_vulkan_heif_avif_arm64` ).
+  If you are using a standard installation version, it is recommended to change the script content directly to the generic `open -a "Krokiet"` .
+  
+*(Note: Some scripts contain Raycast Metadata tags like `@raycast.author` , which are purely the author's original configuration and do not affect direct execution in the terminal.)*
 
 > [!NOTE] 
 > - [`dl-mp4.sh`](Scripts/dl-mp4.sh) will automatically detect the source based on the URL and try to use browser cookies or cookies.txt.
