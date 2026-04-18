@@ -15,7 +15,7 @@
 - [3. Development Environment Setup](#3-development-environment-setup)
 - [4. Input Methods & Text Processing](#4-input-methods--text-processing)
 - [5. Browsers](#5-browsers)
-- [6. Mac Internet Sharing & Debugging](#6-mac-internet-sharing--debugging-internet-sharing)
+- [6. Mac Internet Sharing & Troubleshooting]( #6-mac-internet-Sharing--troubleshooting )
 
 ---
 ## 1. System Core & Security Settings
