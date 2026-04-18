@@ -10,11 +10,11 @@
 
 ---
 ## Table of Contents:
-- [1. System Core & Security Settings](#1-system-core--security-settings-system--security)
-- [2. UI & UX Optimization](#2-ui--ux-optimization-ui--ux)
-- [3. Development Environment Setup](#3-development-environment-setup-development-environment)
-- [4. Input Methods & Text Processing](#4-input-methods--text-processing-input-methods)
-- [5. Browsers](#5-browsers-browsers)
+- [1. System Core & Security Settings](#1-system-core--security-settings)
+- [2. UI & UX Optimization](#2-ui--ux-optimization)
+- [3. Development Environment Setup](#3-development-environment-setup)
+- [4. Input Methods & Text Processing](#4-input-methods--text-processing)
+- [5. Browsers](#5-browsers)
 - [6. Mac Internet Sharing & Debugging](#6-mac-internet-sharing--debugging-internet-sharing)
 
 ---
@@ -292,7 +292,7 @@ The scripts in this project were originally written based on the author's person
 > - [`vChewing_manager.sh`](Scripts/vChewing_manager.sh) will read and write vChewing-related settings and backup folders under `$HOME`.
 
 ---
-## 4. Input Methods & Text Processing (Input Methods)
+## 4. Input Methods & Text Processing
 
 ### 4.1 Mac Input Methods Guide
 ![](https://pub-b63c6b5d1dd94defbe208492cf21033f.r2.dev/mac_keyboard.png)
