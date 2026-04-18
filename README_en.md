@@ -47,7 +47,7 @@ Terminal will prompt for your password. Type it and press Enter (⏎) (Note: Cha
 xattr <path>
 ```
 
-You can drag and drop the file or directory into the terminal to automatically complete the path.
+Drag and drop a file/directory into the terminal to auto-complete its path.
 
 **Remove file quarantine extended attribute:**
 
@@ -90,7 +90,7 @@ defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 ```
 
 > [!NOTE]
-> 2025-09-29: Launchpad has been removed in macOS Tahoe 26+, so this code is useless now (sad), but it can still be used to restart the Dock when it glitches.
+> 2025-09-29: Launchpad has been removed in macOS Tahoe 26+, making this command obsolete (sadly), but it can still be used to restart the Dock when it glitches.
 
 ### 2.2 Force Quit Applications
 
@@ -153,6 +153,10 @@ brew bundle dump --describe --force --file="$HOME/Library/Mobile Documents/com~a
 This command will record all installed **Formulae (CLI packages)** and **Casks (GUI Apps)**, and save them in the iCloud Downloads folder.
 `~/Library/Mobile Documents/com~apple~CloudDocs/Downloads`
 
+> [!NOTE]
+> 💡 **Path Modification Note**
+> The path in the command above (`$HOME/Library/Mobile...`) saves the backup directly to iCloud Drive. If you don't use iCloud or prefer saving it locally, please replace the path with your desired local path (e.g., `~/Desktop/Brewfile`).
+
 #### 3.1.2 Install Homebrew on the new computer
 
 1. Open Terminal, enter the official Homebrew installation command:
@@ -203,13 +207,12 @@ find
 `ZSH_THEME="..."`
 change it to
 `ZSH_THEME="powerlevel10k/powerlevel10k"`
-Press `Ctrl + O` → `Enter` → `Ctrl + X` to exit.
+Press `Ctrl + O` → `Enter` then `Ctrl + X` to save and exit.
 then
 ```bash
 p10k configure
 ```
-At this point, an **interactive setup interface** will pop up automatically.
-It will ask: "Can you see the diamond symbol?", "Can you see the lock?". Follow the steps to choose your desired interface.
+An interactive configuration wizard will launch. Follow the on-screen prompts (e.g., "**Does this look like a** diamond **(rotated square)?**") to customize your terminal appearance.
 ###### jetbrains-mono-nerd-font
 
 ```bash
@@ -233,7 +236,7 @@ find
 `plugins=(git)`
 change it to
 `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
-Press `Ctrl + O` → `Enter` → `Ctrl + X` to exit.
+Press `Ctrl + O` → `Enter` then `Ctrl + X` to save and exit.
 ### 3.3 Scripts:
 
 > [!IMPORTANT]
@@ -299,7 +302,7 @@ The scripts in this project were originally written based on the author's person
 	- The default shortcut is to press and hold `ctrl (⌃) + Space` to cycle through all input methods in order.
 	- Or press the `fn (Globe key)` to switch between all input methods.
 - **Convert Half-width/Full-width Characters:**
-  In Zhuyin mode, all input is "full-width", and in English mode, all input is "half-width". In Zhuyin mode, you can select text and click the input method option in the Menubar to switch between full-width and half-width.
+  Zhuyin mode defaults to full-width characters, while English mode defaults to half-width.
 
 > [!NOTE]
 > 2026-02-21: Switched from the built-in Zhuyin input method to [vChewing](https://github.com/vChewing/vChewing-macOS)
@@ -537,7 +540,7 @@ netstat -an | grep 192.168.2
 ### 6.3 Common Issues and System-level Cleanup
 
 **Issue 1: Op Mode is HOSTAP, but SSID and IPv4 are still None**
-This means the system's sharing service is stuck. You can directly restart the core service via `launchctl`:
+This indicates the macOS sharing daemon is hung. You can directly restart the core service via `launchctl`:
 
 ```bash
 sudo launchctl bootout system /System/Library/LaunchDaemons/com.apple.InternetSharing.plist 2>/dev/null
